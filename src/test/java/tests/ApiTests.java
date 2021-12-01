@@ -21,7 +21,7 @@ public class ApiTests extends Endpoints {
         super(baseUrl);
     }
 
-    @Test
+    @Test(description = "Check list of employees")
     public void checkListOfEmployees() {
 
         endPoints = new Endpoints(baseUrl);
