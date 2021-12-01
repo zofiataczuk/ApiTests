@@ -19,11 +19,12 @@ public class ApiTests extends Endpoints {
 
     public ApiTests(String baseUrl) {
         super(baseUrl);
-        endPoints = new Endpoints(baseUrl);
     }
 
     @Test
     public void checkListOfEmployees() {
+
+        endPoints = new Endpoints(baseUrl);
 
         IRestResponse<Employees> employeesResponse = endPoints.getListOfEmployees();
         String status = employeesResponse.getBody().getStatus();
@@ -35,6 +36,8 @@ public class ApiTests extends Endpoints {
 
     @Test
     public void checkEmployeeData() {
+
+        endPoints = new Endpoints(baseUrl);
 
         IRestResponse<Employees> employeesResponse = endPoints.getListOfEmployees();
         List <EmployeeData> employeeDataList = employeesResponse.getBody().getData();
